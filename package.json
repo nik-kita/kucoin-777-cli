@@ -1,0 +1,43 @@
+{
+  "name": "@nik-kita/kucoin-777-cli",
+  "description": "",
+  "files": [
+    "dist/**/*"
+  ],
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "rm -fr dist && npx tsc -p tsconfig.json",
+    "prepare": "npm run build",
+    "start": "node dist",
+    "version": "git add -A",
+    "postversion": "git push",
+    "gitam": "git add -A && git commit -m ",
+    "patch": "npm version patch && npm publish --access public"
+  },
+  "keywords": [],
+  "author": "https://github.com/nik-kita <volsknik@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nik-kita/kucoin-777-cli/issues"
+  },
+  "homepage": "https://github.com/nik-kita/kucoin-777-cli#readme",
+  "devDependencies": {
+    "@types/ioredis": "^4.28.7",
+    "@types/node": "^17.0.8",
+    "@typescript-eslint/eslint-plugin": "^5.9.0",
+    "@typescript-eslint/parser": "^5.9.0",
+    "eslint": "^8.6.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.25.4",
+    "typescript": "^4.5.4"
+  },
+  "version": "0.4.2",
+  "dependencies": {
+    "@nik-kita/kucoin-777-api": "^0.1.2",
+    "@nik-kita/kucoin-777-ws-types": "^0.2.2",
+    "@types/prompts": "^2.0.14",
+    "ioredis": "^4.28.2",
+    "prompts": "^2.4.2"
+  }
+}

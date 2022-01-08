@@ -4,14 +4,8 @@ import prompts from 'prompts';
 
 (async () => {
     const pub = new Redis({ db: 7 });
-    const sub = pub.duplicate();
 
-    await sub.subscribe('from:ws:main', 'from:processor:main');
     await pub.publish('to:ws', 'open');
-
-    sub.on('message', (channel, message) => {
-        console.log(channel, message);
-    });
 
     while (true) {
         const { value } = await prompts({

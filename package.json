@@ -32,7 +32,7 @@
     "eslint-plugin-import": "^2.25.4",
     "typescript": "^4.5.4"
   },
-  "version": "0.4.2",
+  "version": "0.0.0",
   "dependencies": {
     "@nik-kita/kucoin-777-api": "^0.1.2",
     "@nik-kita/kucoin-777-ws-types": "^0.2.2",
